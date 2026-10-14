@@ -19,7 +19,7 @@ export default function App() {
   const [source, setSource] = useState(SAMPLE); const [fileName, setFileName] = useState('Counter.sol'); const [contractName, setContractName] = useState('Counter');
   const [runs, setRuns] = useState(200); const [queued, setQueued] = useState(false); const [health, setHealth] = useState(null);
   const [result, setResult] = useState(null); const [diagnostics, setDiagnostics] = useState([]); const [selected, setSelected] = useState(0); const [view, setView] = useState('abi');
-  const [status, setStatus] = useState({ type: 'idle', text: 'Connect to SolidityStackDiamond, then compile.' }); const [busy, setBusy] = useState(false);
+  const [status, setStatus] = useState({ type: 'idle', text: 'Connect to SolcQueue, then compile.' }); const [busy, setBusy] = useState(false);
   const api = useMemo(() => { try { return new CompilerApi(apiUrl); } catch { return null; } }, [apiUrl]); const contract = result?.contracts?.[selected];
   useEffect(() => { localStorage.setItem('solidityapi:url', apiUrl); }, [apiUrl]);
 

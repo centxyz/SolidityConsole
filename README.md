@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/centxyz/SolidityConsole/actions/workflows/ci.yml/badge.svg)](https://github.com/centxyz/SolidityConsole/actions/workflows/ci.yml)
 
-SolidityConsole is the browser console for [SolidityStackDiamond](https://github.com/centxyz/SolidityStackDiamond). It sends Solidity source to a real compiler service, supports immediate and queued compilation, displays compiler diagnostics, and lets users inspect or download ABI, creation bytecode, deployed bytecode, and compiler metadata.
+SolidityConsole is the browser console for [SolcQueue](https://github.com/centxyz/SolcQueue). It sends Solidity source to a real compiler service, supports immediate and queued compilation, displays compiler diagnostics, and lets users inspect or download ABI, creation bytecode, deployed bytecode, and compiler metadata.
 
 ## Capabilities
 
@@ -20,8 +20,8 @@ SolidityConsole is the browser console for [SolidityStackDiamond](https://github
 Start the compiler API:
 
 ```bash
-git clone https://github.com/centxyz/SolidityStackDiamond.git
-cd SolidityStackDiamond
+git clone https://github.com/centxyz/SolcQueue.git
+cd SolcQueue
 npm install
 npm start
 ```
@@ -35,7 +35,7 @@ npm install
 npm run dev
 ```
 
-The default API URL is `http://localhost:3000`. Enter another HTTP(S) service URL in the console when SolidityStackDiamond runs elsewhere. Configure that service's CORS policy for the console's origin.
+The default API URL is `http://localhost:3000`. Enter another HTTP(S) service URL in the console when SolcQueue runs elsewhere. Configure that service's CORS policy for the console's origin. The server currently retains the legacy `SolidityStackDiamond` service identifier in API responses for compatibility.
 
 ## Verify
 
@@ -54,6 +54,6 @@ MIT © cent
 
 ## Current limitations
 
-- The console requires a reachable compatible SolidityStackDiamond service.
+- The console requires a reachable compatible SolcQueue service.
 - Successful compilation does not imply that a contract is secure, deployable, or economically correct.
 - The browser downloads artifacts but does not sign or deploy contracts.
